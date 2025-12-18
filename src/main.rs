@@ -1,7 +1,10 @@
 fn main() {
     let day_of_christmas: String = get_day_of_christmas(4);
     let day_of_christmas_suffix: String = get_day_of_christmas_suffix(4);
-    println!("Day of Christmas: {day_of_christmas}{day_of_christmas_suffix}");
+    let christmas_present: String = get_christmas_present(4);
+    println!(
+        "Day of Christmas: {day_of_christmas}{day_of_christmas_suffix} Present: {christmas_present}"
+    );
     println!("Hello, world!");
 }
 
@@ -21,4 +24,26 @@ fn get_day_of_christmas_suffix(day: i8) -> String {
         "th".to_string()
     };
     return day_suffix;
+}
+
+fn get_christmas_present(day: i8) -> String {
+    // subtract 1 from the day to account for the 0 index in the array
+    let present_index = (day - 1) as usize;
+    let christmas_presents = [
+        "a partridge in a pear tree",
+        "two turtle doves",
+        "three french hens",
+        "four calling birds",
+        "five golden rings",
+        "six geese a-laying",
+        "seven swans a-swimming",
+        "eight maids a-milking",
+        "nine ladies dancing",
+        "ten lords a-leaping",
+        "eleven pipers piping",
+        "twelve drummers drumming",
+    ];
+    let christmas_present = christmas_presents[present_index];
+
+    return christmas_present.to_string();
 }
