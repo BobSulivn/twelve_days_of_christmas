@@ -5,7 +5,6 @@ fn main() {
     println!(
         "Day of Christmas: {day_of_christmas}{day_of_christmas_suffix} Present: {christmas_present}"
     );
-    println!("Hello, world!");
 }
 
 fn get_day_of_christmas(day: i8) -> String {
