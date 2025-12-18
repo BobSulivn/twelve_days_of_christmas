@@ -3,7 +3,7 @@ fn main() {
     let day_of_christmas_suffix: String = get_day_of_christmas_suffix(4);
     let christmas_present: String = get_christmas_present(4);
     println!(
-        "On the {day_of_christmas}{day_of_christmas_suffix} my true love gave to me {christmas_present}"
+        "On the {day_of_christmas}{day_of_christmas_suffix} day of Christmas, my true love gave to me {christmas_present}"
     );
 }
 
