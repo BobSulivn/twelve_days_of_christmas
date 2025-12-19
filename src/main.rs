@@ -15,9 +15,8 @@ fn get_day_of_christmas(index: i8) -> String {
     return days_of_christmas[day_index].to_string();
 }
 
-fn get_christmas_present(day: i8) -> String {
-    // subtract 1 from the day to account for the 0 index in the array
-    let present_index = (day - 1) as usize;
+fn get_christmas_present(index: i8) -> String {
+    let present_index = index as usize;
     let christmas_presents = [
         "a partridge in a pear tree",
         "two turtle doves",
