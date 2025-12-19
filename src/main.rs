@@ -1,21 +1,25 @@
 fn main() {
-    let day_of_christmas: String = get_day_of_christmas(4);
-    let christmas_present: String = get_christmas_present(4);
-    println!(
-        "On the {day_of_christmas} day of Christmas, my true love gave to me {christmas_present}"
-    );
+    let mut counter: i32 = 0;
+    while counter < 12 {
+        let day_of_christmas: String = get_day_of_christmas(counter);
+        let christmas_present: String = get_christmas_present(counter);
+        println!(
+            "On the {day_of_christmas} day of Christmas, my true love gave to me {christmas_present}"
+        );
+        counter += 1;
+    }
 }
 
-fn get_day_of_christmas(index: i8) -> String {
+fn get_day_of_christmas(index: i32) -> String {
+    let day_index: usize = index as usize;
     let days_of_christmas = [
         "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eigth", "ninth",
         "tenth", "eleventh", "twelth",
     ];
-    let day_index: usize = index as usize;
     return days_of_christmas[day_index].to_string();
 }
 
-fn get_christmas_present(index: i8) -> String {
+fn get_christmas_present(index: i32) -> String {
     let present_index = index as usize;
     let christmas_presents = [
         "a partridge in a pear tree",
