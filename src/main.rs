@@ -1,28 +1,18 @@
 fn main() {
     let day_of_christmas: String = get_day_of_christmas(4);
-    let day_of_christmas_suffix: String = get_day_of_christmas_suffix(4);
     let christmas_present: String = get_christmas_present(4);
     println!(
-        "On the {day_of_christmas}{day_of_christmas_suffix} day of Christmas, my true love gave to me {christmas_present}"
+        "On the {day_of_christmas} day of Christmas, my true love gave to me {christmas_present}"
     );
 }
 
-fn get_day_of_christmas(day: i8) -> String {
-    let day_number: String = day.to_string();
-    return day_number;
-}
-
-fn get_day_of_christmas_suffix(day: i8) -> String {
-    let day_suffix: String = if day == 1 {
-        "st".to_string()
-    } else if day == 2 {
-        "nd".to_string()
-    } else if day == 3 {
-        "rd".to_string()
-    } else {
-        "th".to_string()
-    };
-    return day_suffix;
+fn get_day_of_christmas(index: i8) -> String {
+    let days_of_christmas = [
+        "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eigth", "ninth",
+        "tenth", "eleventh", "twelth",
+    ];
+    let day_index: usize = index as usize;
+    return days_of_christmas[day_index].to_string();
 }
 
 fn get_christmas_present(day: i8) -> String {
