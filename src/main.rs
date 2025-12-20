@@ -3,9 +3,21 @@ fn main() {
     while counter < 12 {
         let day_of_christmas: String = get_day_of_christmas(counter);
         let christmas_present: String = get_christmas_present(counter);
+        let mut inner_counter = counter - 1;
         println!(
             "On the {day_of_christmas} day of Christmas, my true love gave to me {christmas_present}"
         );
+        if inner_counter != -1 {
+            while inner_counter >= 0 {
+                if inner_counter != 0 {
+                    let inner_counter_string: String = inner_counter.to_string();
+                    println!("{inner_counter_string}");
+                } else {
+                    println!("inner counter is 0")
+                }
+                inner_counter -= 1;
+            }
+        }
         counter += 1;
     }
 }
