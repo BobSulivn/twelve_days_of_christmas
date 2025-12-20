@@ -9,11 +9,11 @@ fn main() {
         );
         if inner_counter != -1 {
             while inner_counter >= 0 {
+                let other_present: String = get_christmas_present(inner_counter);
                 if inner_counter != 0 {
-                    let inner_counter_string: String = inner_counter.to_string();
-                    println!("{inner_counter_string}");
+                    println!(", {other_present}");
                 } else {
-                    println!("inner counter is 0")
+                    println!("and {other_present}");
                 }
                 inner_counter -= 1;
             }
