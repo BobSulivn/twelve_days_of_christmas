@@ -11,7 +11,7 @@ fn main() {
             while inner_counter >= 0 {
                 let other_present: String = get_christmas_present(inner_counter);
                 if inner_counter != 0 {
-                    println!(", {other_present}");
+                    println!("{other_present}");
                 } else {
                     println!("and {other_present}");
                 }
